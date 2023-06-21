@@ -29,7 +29,7 @@ import time
 def init():
     global model
     
-    model = whisper.load_model("base")
+    model = whisper.load_model("base").to("gpu")
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
